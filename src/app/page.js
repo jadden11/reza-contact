@@ -1,103 +1,162 @@
+import Link from "next/link";
 import Image from "next/image";
+import ServicesSection from "@/components/Service";
+import Pricing from "@/components/Pricing";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <>
+      {/* Title */}
+      <div className="py-10">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          Bangun Bisnis Anda dengan Solusi Digital Profesional
+        </h1>
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl">
+          Seorang Software Engineer berpengalaman dengan rekam jejak solid
+          selama 7 tahun di berbagai industri terkemuka. Saat ini, saya
+          berkontribusi aktif di{" "}
+          <span className="font-semibold text-blue-700">Bank Mandiri</span>,
+          membawa keahlian mendalam yang terasah melalui pengalaman berharga di{" "}
+          <span className="font-semibold text-blue-700">Bank BNI</span>,{" "}
+          <span className="font-semibold text-blue-700">Tiket.com</span>,{" "}
+          <span className="font-semibold text-blue-700">Jakarta Property</span>,{" "}
+          <span className="font-semibold text-blue-700">SeaBank</span>, dan{" "}
+          <span className="font-semibold text-blue-700">Garena</span> (sebagai
+          IT Engineer). Jejak karir internasional saya mencakup kolaborasi
+          dengan berbagai startup inovatif di{" "}
+          <span className="font-semibold text-green-700">Jepang</span> dan{" "}
+          <span className="font-semibold text-green-700">Singapura</span>,
+          memperkaya perspektif global saya dalam pengembangan perangkat lunak.
+          Dengan pemahaman yang luas tentang siklus pengembangan perangkat
+          lunak, arsitektur sistem, dan kemampuan adaptasi lintas sektor yang
+          terbukti, saya siap menghadirkan solusi teknologi yang tidak hanya
+          efektif dan inovatif, tetapi juga selaras dengan kebutuhan spesifik
+          Anda.
+        </p>
+        <div className="mt-5">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="bg-blue-600 rounded-4xl p-3 shadow-2xl text-white font-semibold hover:bg-blue-900"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            <i className="ri-contacts-line pr-2"></i>
+            Contact
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+      {/* Title */}
+
+      {/* Background */}
+      <div className="relative w-full h-[500px]">
+        <Image
+          src="/bg.jpg"
+          alt="background"
+          fill
+          className="object-cover rounded-4xl"
+          priority
+        />
+      </div>
+      {/* Background */}
+
+      <div className="py-4"></div>
+      <ServicesSection />
+
+      <div className="py-4"></div>
+      <Pricing />
+
+      <div className="py-4"></div>
+      {/* Footer */}
+      <footer className="bg-gray-100 py-12 border-t border-gray-200 rounded-t-4xl">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:flex md:items-center md:justify-between">
+            <div className="mb-8 md:mb-0">
+              <div className="flex justify-start items-center gap-3 sm:gap-4">
+                <Image
+                  src="/icon.jpg"
+                  alt="logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <p className="text-xl font-semibold text-gray-800">
+                  Mohammad Reza
+                </p>
+              </div>
+              <p className="mt-2 text-sm text-gray-500">Kab. Bogor</p>
+              <p className="mt-1 text-sm text-gray-500">Email: reza@dev.com</p>
+              <p className="mt-1 text-sm text-gray-500">
+                Telepon: +62 813 8841 0749
+              </p>
+            </div>
+
+            <div className="md:flex md:items-start md:space-x-8">
+              <div className="mb-8 md:mb-0">
+                <h6 className="text-sm font-semibold text-gray-700 uppercase mb-4">
+                  Navigasi
+                </h6>
+                <ul className="list-none space-y-2">
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      Beranda
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      Tentang Kami
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      Layanan
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      Kontak
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-8 md:mb-0">
+                <h6 className="text-sm font-semibold text-gray-700 uppercase mb-4">
+                  Ikuti Kami
+                </h6>
+                <ul className="list-none space-y-2">
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      <i className="ri-facebook-fill text-blue-600 mr-2 align-middle"></i>{" "}
+                      Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      <i className="ri-twitter-x-line text-black mr-2 align-middle"></i>{" "}
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      <i className="ri-instagram-fill text-pink-500 mr-2 align-middle"></i>{" "}
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-500 hover:text-gray-900">
+                      <i className="ri-linkedin-fill text-blue-800 mr-2 align-middle"></i>{" "}
+                      LinkedIn
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center text-sm text-gray-500">
+            &copy; 2025 Mohammad Reza. Hak cipta dilindungi.
+          </div>
+        </div>
       </footer>
-    </div>
+      {/* Footer */}
+    </>
   );
 }
