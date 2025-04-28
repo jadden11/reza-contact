@@ -2,8 +2,15 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const Pricing = () => {
+  const router = useRouter();
+
+  const handlePilihPaket = (title) => {
+    router.push(`/request-form?paket=${encodeURIComponent(title)}`);
+  };
+
   const packages = [
     {
       title: "Solusi Portfolio & Landing Page Impresif",
@@ -97,7 +104,10 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <button className="bg-[#21130d] text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition">
+              <button
+                className="bg-[#21130d] text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition"
+                onClick={() => handlePilihPaket(pkg.title)} // Kirim judul paket
+              >
                 Pilih Paket
               </button>
             </motion.div>
